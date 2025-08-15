@@ -98,4 +98,25 @@ export const mockProducts = [
 export const trendingProducts = mockProducts.slice(0, 5);
 export const bestSellers = mockProducts.slice(2, 7);
 export const newArrivals = mockProducts.slice(5, 10);
-export const forYouProducts = [mockProducts[0], mockProducts[3], mockProducts[6], mockProducts[8], mockProducts[1]];
+export const forYouProducts = [
+  { 
+    ...mockProducts[0], 
+    recommendationReason: "Your friends also like this" 
+  },
+  { 
+    ...mockProducts[3], 
+    recommendationReason: "Based on your recent views" 
+  },
+  { 
+    ...mockProducts[6], 
+    recommendationReason: "Similar to items you bought" 
+  },
+  { 
+    ...mockProducts[8], 
+    recommendationReason: "Trending in your area" 
+  },
+  { 
+    ...mockProducts[1], 
+    recommendationReason: "Perfect match for you" 
+  }
+];

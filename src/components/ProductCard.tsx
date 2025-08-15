@@ -12,6 +12,7 @@ interface ProductCardProps {
   reviewCount: number;
   image: string;
   isOnSale?: boolean;
+  recommendationReason?: string;
 }
 
 export default function ProductCard({
@@ -23,6 +24,7 @@ export default function ProductCard({
   reviewCount,
   image,
   isOnSale = false,
+  recommendationReason,
 }: ProductCardProps) {
   const [feedback, setFeedback] = useState<"up" | "down" | null>(null);
 
@@ -88,6 +90,12 @@ export default function ProductCard({
       </div>
 
       <div className="p-4 space-y-3">
+        {recommendationReason && !isUnrecommended && (
+          <div className="bg-accent/50 text-accent-foreground text-xs px-2 py-1 rounded-full inline-block">
+            {recommendationReason}
+          </div>
+        )}
+        
         <h3 className={`font-medium line-clamp-2 ${
           isUnrecommended ? "text-muted-foreground" : "text-card-foreground"
         }`}>{name}</h3>
