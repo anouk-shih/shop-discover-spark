@@ -52,6 +52,10 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				price: 'hsl(var(--price-color))',
+				sale: 'hsl(var(--sale-color))',
+				rating: 'hsl(var(--rating-color))',
+				success: 'hsl(var(--success-color))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
